@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component{
@@ -11,15 +11,19 @@ class App extends Component{
       monsters: [
         {
           name: 'Linda',
+          id: '12e1231e',
         },
         {
           name: 'Frank',
+          id: '12ed2dacas',
         },
         {
           name: 'Jacky',
+          id: '1231e',
         },
         {
           name: 'Andrei',
+          id: '12e1213e',
         },
       ],
     };
@@ -29,7 +33,11 @@ class App extends Component{
     return (
       <div className="App">
         {this.state.monsters.map((monster) => {
-          return <h1>{monster.name}</h1>;
+          return (
+            <div key={monster.id}>
+              <h1>{monster.name}</h1>
+            </div>
+          );
         })}
       </div>
     );
